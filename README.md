@@ -1,0 +1,4 @@
+# random-insults-bot
+Does exactly what you would assume from the title. It insults people randomly.
+
+The bot at an interval set in settings.json will select a random post out of the list of controversial posts. The bot will then check the post's ID with saved ids in commentedPosts.json, if the post has already been commented on, the bot will do nothing that cycle. If the bot has not already commented on the post, the bot will select 1 random adjective, 1 random expletive, and 1 random noun. The bot will then combine these together with you at the front to make something that usually sounds like an insult. The bot will only do this on controversial posts from the subreddits specified in settings.json. The bot will cycle through 1 subreddit each interval. For example in the current case of the settings file, the bot will attempt to insult someone on r/memes, then r/rareinsults, then back to r/memes and so forth.
