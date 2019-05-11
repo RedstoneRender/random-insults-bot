@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Snoowrap = require("snoowrap");
-const Snoostorm = require("snoostorm");
+//const Snoostorm = require("snoostorm");
 const creds = JSON.parse(fs.readFileSync("creds.json"));
 var commentedPosts = JSON.parse(fs.readFileSync("commentedPosts.json"))
 const settings = JSON.parse(fs.readFileSync("settings.json"))
