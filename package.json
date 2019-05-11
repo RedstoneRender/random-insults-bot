@@ -1,0 +1,17 @@
+{
+  "name": "insults_bot",
+  "version": "1.0.0",
+  "description": "a reddit bot that randomly insults people",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "fs": "0.0.1-security",
+    "snoostorm": "^1.0.2",
+    "snoowrap": "^1.15.2"
+  }
+}
