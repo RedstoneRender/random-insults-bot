@@ -5,6 +5,7 @@ const creds = JSON.parse(fs.readFileSync("creds.json"));
 var commentedPosts = JSON.parse(fs.readFileSync("commentedPosts.json"))
 const settings = JSON.parse(fs.readFileSync("settings.json"))
 const adjectives = JSON.parse(fs.readFileSync("adjectives.json"));
+const adverbs =  JSON.parse(fs.readFileSync("adverbs.json"));
 const nouns = JSON.parse(fs.readFileSync("nouns.json"));
 const expletives = JSON.parse(fs.readFileSync("expletives.json"));
 const r = new Snoowrap({
@@ -29,12 +30,13 @@ function insult(posts) {
   var post = posts[parseInt(Math.random()*posts.length)];
   //console.log(post);
   if(!commentedPosts.includes(post.id)) {
+    var adverbChoice = ["",randomChoice(adverbs) + " "];
+    var adverb = randomChoice(adverbChoice);
     var adjective = randomChoice(adjectives);
     var expletive = randomChoice(expletives);
     var noun = randomChoice(nouns);
-    var insult = "you " + adjective + " " + expletive + " " + noun
-    console.log(insult);
-    console.log(settings.subreddits[cycleTime-1]);
+    var insult = "you " + adverb + adjective + " " + expletive + " " + noun
+    console.log(insult + " in " + settings.subreddits[cycleTime-1]);
     post.reply(insult);
     commentedPosts.push(post.id);
     var json = JSON.stringify(commentedPosts);
