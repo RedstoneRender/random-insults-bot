@@ -1,5 +1,6 @@
 {
   "subreddits":["memes","rareinsults"],
   "interval":"10000",
-  "numOfPosts":"1"
+  "numOfPosts":"1",
+  "signature":"\n ______________________________________________________________ \n This is a bot and this insult was posted automatically."
 }
