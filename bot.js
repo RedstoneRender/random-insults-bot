@@ -37,7 +37,7 @@ function insult(posts) {
     var noun = randomChoice(nouns);
     var insult = "you " + adverb + adjective + " " + expletive + " " + noun
     console.log(insult + " in " + settings.subreddits[cycleTime-1]);
-    post.reply(insult);
+    post.reply(insult + settings.signature);
     commentedPosts.push(post.id);
     var json = JSON.stringify(commentedPosts);
     fs.writeFile("commentedPosts.json",json,"utf8",callback);
